@@ -207,7 +207,7 @@ sudo yunohost backup restore auto_borg_XX_XX_XX_XX:XX --apps
 ### Edit the list of YunoHost apps to backup
 ``yunohost app setting borg apps -v "nextcloud,wordpress"``
 
-### Other usefull borg commands
+Other usefull borg commands
 [Get the storage space used by the backup repository on the host server](https://borgbackup.readthedocs.io/en/stable/usage/info.html)
 ``borg info /home/servera/backup``
 
@@ -222,3 +222,6 @@ Then you can set up multiple instances of the Borg Apps on same servers.
 For instance:
 * Borg Backup instance ``borg``: backup nextcloud daily on host Server B
 * Borg Backup instance ``borg__2``: backup all other YunoHost apps weekly on host Server C
+
+### Settings location
+Settings of apps are in /etc/yunohost/apps/*/settings.yml, so are the settings for borg_ynh as well. 
